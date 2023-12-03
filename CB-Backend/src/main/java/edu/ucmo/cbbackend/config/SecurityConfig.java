@@ -83,15 +83,15 @@ public class SecurityConfig {
 
 
     @Bean()
-    @Order(4)
+    @Order(3)
     SecurityFilterChain securityFilterChainA(HttpSecurity http) throws Exception {
         return http.csrf(csrf -> {
                     csrf.disable();
                 })
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(new AntPathRequestMatcher("/login")).permitAll()
-                        .requestMatchers(new AntPathRequestMatcher("/api/v1/user/**")).permitAll() // permit all requests to login
                         .requestMatchers(new AntPathRequestMatcher("/api/v1/user")).permitAll()// permit all requests to login
+                        .requestMatchers(new AntPathRequestMatcher("/api/v1/user/**")).permitAll()// permit all requests to login
                         .anyRequest().authenticated()// all other requests require authentication
                 )
                 .cors(withDefaults())
@@ -104,13 +104,6 @@ public class SecurityConfig {
     }
 
 
-    @Bean
-    @Order(3)
-    SecurityFilterChain h2ConsoleSecurityFilterChain(HttpSecurity http) throws Exception {
-        return http.securityMatcher(AntPathRequestMatcher.antMatcher("/h2-console/**")).authorizeHttpRequests(auth -> {
-            auth.requestMatchers(AntPathRequestMatcher.antMatcher("/h2-console/**")).permitAll();
-        }).csrf(csrf -> csrf.ignoringRequestMatchers(AntPathRequestMatcher.antMatcher("/h2-console/**"))).headers(headers -> headers.frameOptions().disable()).build();
-    }
 
 
     @Bean
