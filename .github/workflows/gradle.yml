@@ -1,0 +1,33 @@
+name: Native-AMD64
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/setup-java@v2
+        with:
+          distribution: "liberica" # See 'Supported distributions' for available options
+          java-version: "21"
+      - name: Checkout master
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+      #Build Image
+      - name: Build Image
+        run: ./gradlew bootBuildImage
+      #Login to DockerHub
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      #Tag the version
+      #Deploy the image to the Docker registry
+      - name: Push Images to Docker Registry
+        run: docker push -a ianworleyxyz/cbbackend
