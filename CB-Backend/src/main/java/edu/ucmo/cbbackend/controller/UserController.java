@@ -67,7 +67,7 @@ public class UserController {
         try {
          User  userEnity  =   userService.toEntity(user);
         userService.save(userEnity);
-            return ResponseEntity.ok().body(new UserResponse(userEnity));
+            return ResponseEntity.ok().body(userService.toDto(userEnity));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.toString());
         }
@@ -119,7 +119,7 @@ public class UserController {
 
         userService.save(userToUpdate);
 
-        return ResponseEntity.ok().body(new UserResponse(userToUpdate));
+        return ResponseEntity.ok().body(userService.toDto(userToUpdate));
     }
 
     @SecurityRequirement(name = "jwtAuth")
@@ -127,6 +127,6 @@ public class UserController {
     public ResponseEntity<?> getCurrentUser(HttpServletRequest request) {
         Principal principal = request.getUserPrincipal();
         User userData  =  userService.loadUserByUsername(principal.getName());
-             return ResponseEntity.ok().body(new UserResponse(userData));
+             return ResponseEntity.ok().body(userService.toDto(userData));
     }
 }

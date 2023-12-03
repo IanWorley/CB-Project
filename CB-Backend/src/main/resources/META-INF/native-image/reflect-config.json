@@ -1,4 +1,15 @@
 [
+  [
+    {
+      "name" : "edu.ucmo.cbbackend.dto.response.UserResponse",
+      "allDeclaredConstructors" : true,
+      "allPublicConstructors" : true,
+      "allDeclaredMethods" : true,
+      "allPublicMethods" : true,
+      "allDeclaredFields" : true,
+      "allPublicFields" : true
+    }
+  ]
 {
   "name":"[B"
 },
@@ -326,7 +337,7 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"getJsonFactory","parameterTypes":[] }, {"name":"readValues","parameterTypes":["com.fasterxml.jackson.core.JsonParser","com.fasterxml.jackson.core.type.ResolvedType"] }, {"name":"readValues","parameterTypes":["com.fasterxml.jackson.core.JsonParser","com.fasterxml.jackson.core.type.TypeReference"] }, {"name":"readValues","parameterTypes":["com.fasterxml.jackson.core.JsonParser","java.lang.Class"] }]
+  "methods":[{"name":"getJsonFactory","parameterTypes":[] }, {"name":"readValues","parameterTypes":["com.fasterxml.jackson.core.JsonParser","com.fasterxml.jackson.core.type.ResolvedType"] }, {"name":"readValues","parameterTypes":["com.fasterxml.jackson.core.JsonParser","java.lang.Class"] }]
 },
 {
   "name":"com.fasterxml.jackson.core.PrettyPrinter"
@@ -935,7 +946,7 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":["edu.ucmo.cbbackend.service.ChangeService","edu.ucmo.cbbackend.service.UserService","edu.ucmo.cbbackend.repository.RolesRepository"] }, {"name":"change","parameterTypes":["edu.ucmo.cbbackend.dto.request.ChangeRequestBodyDTO","jakarta.servlet.http.HttpServletRequest"] }, {"name":"deleteChangeById","parameterTypes":["java.lang.Long"] }, {"name":"getChange","parameterTypes":["jakarta.servlet.http.HttpServletRequest","java.lang.Integer","java.lang.Integer","java.lang.Boolean","java.lang.String"] }, {"name":"getChangeById","parameterTypes":["java.lang.Long"] }, {"name":"updateChangeRequestRole","parameterTypes":["java.lang.Long","jakarta.servlet.http.HttpServletRequest"] }, {"name":"updateChangeRequestRoleDeny","parameterTypes":["java.lang.Long","jakarta.servlet.http.HttpServletRequest"] }]
+  "methods":[{"name":"<init>","parameterTypes":["edu.ucmo.cbbackend.service.ChangeService","edu.ucmo.cbbackend.service.UserService","edu.ucmo.cbbackend.repository.RolesRepository"] }, {"name":"getChange","parameterTypes":["jakarta.servlet.http.HttpServletRequest","java.lang.Integer","java.lang.Integer","java.lang.Boolean","java.lang.String"] }]
 },
 {
   "name":"edu.ucmo.cbbackend.controller.ChangeController$$SpringCGLIB$$0"
@@ -955,17 +966,13 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":["edu.ucmo.cbbackend.repository.UserRepository","edu.ucmo.cbbackend.service.UserService"] }, {"name":"deleteUserById","parameterTypes":["java.lang.Long"] }, {"name":"getCurrentUser","parameterTypes":["jakarta.servlet.http.HttpServletRequest"] }, {"name":"getUserById","parameterTypes":["java.lang.Long"] }]
+  "methods":[{"name":"<init>","parameterTypes":["edu.ucmo.cbbackend.repository.UserRepository","edu.ucmo.cbbackend.service.UserService"] }, {"name":"getCurrentUser","parameterTypes":["jakarta.servlet.http.HttpServletRequest"] }]
 },
 {
   "name":"edu.ucmo.cbbackend.controller.UserController$$SpringCGLIB$$0"
 },
 {
-  "name":"edu.ucmo.cbbackend.dto.request.ChangeRequestBodyDTO",
-  "allDeclaredFields":true,
-  "queryAllDeclaredMethods":true,
-  "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"setApplicationId","parameterTypes":["java.lang.Long"] }, {"name":"setApproveOrDeny","parameterTypes":["edu.ucmo.cbbackend.model.ChangeRequestApproveOrDeny"] }, {"name":"setAuthorId","parameterTypes":["java.lang.Long"] }, {"name":"setBackoutPlan","parameterTypes":["java.lang.String"] }, {"name":"setChangeType","parameterTypes":["java.lang.String"] }, {"name":"setDateCreated","parameterTypes":["java.util.Date"] }, {"name":"setDescription","parameterTypes":["java.lang.String"] }, {"name":"setImplementer","parameterTypes":["java.lang.String"] }, {"name":"setReason","parameterTypes":["java.lang.String"] }, {"name":"setRiskLevel","parameterTypes":["java.lang.String"] }, {"name":"setRoles","parameterTypes":["java.lang.String"] }, {"name":"setState","parameterTypes":["edu.ucmo.cbbackend.model.ChangeRequestState"] }, {"name":"setTimeToRevert","parameterTypes":["java.lang.Long"] }, {"name":"setTimeWindowEnd","parameterTypes":["java.util.Date"] }, {"name":"setTimeWindowStart","parameterTypes":["java.util.Date"] }]
+  "name":"edu.ucmo.cbbackend.dto.request.ChangeRequestBodyDTO"
 },
 {
   "name":"edu.ucmo.cbbackend.dto.request.LoginRequest"
@@ -2742,8 +2749,7 @@
   "name":"java.sql.ResultSet"
 },
 {
-  "name":"java.sql.SQLException",
-  "fields":[{"name":"next"}]
+  "name":"java.sql.SQLException"
 },
 {
   "name":"java.sql.SQLFeatureNotSupportedException"
@@ -2800,8 +2806,7 @@
 {
   "name":"java.util.Date",
   "allDeclaredFields":true,
-  "queryAllDeclaredMethods":true,
-  "queryAllDeclaredConstructors":true
+  "queryAllDeclaredMethods":true
 },
 {
   "name":"java.util.EnumSet"
@@ -10670,7 +10675,7 @@
   "queryAllDeclaredMethods":true,
   "queryAllPublicMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":["org.springframework.data.jpa.repository.support.JpaEntityInformation","jakarta.persistence.EntityManager"] }, {"name":"deleteById","parameterTypes":["java.lang.Object"] }, {"name":"findAll","parameterTypes":[] }, {"name":"findById","parameterTypes":["java.lang.Object"] }, {"name":"findByNameIgnoreCase","parameterTypes":["java.lang.String"] }, {"name":"findByRoles_NameAndState","parameterTypes":["java.lang.String","edu.ucmo.cbbackend.model.ChangeRequestState","org.springframework.data.domain.Pageable"] }, {"name":"findByUsername","parameterTypes":["java.lang.String"] }, {"name":"save","parameterTypes":["java.lang.Object"] }]
+  "methods":[{"name":"<init>","parameterTypes":["org.springframework.data.jpa.repository.support.JpaEntityInformation","jakarta.persistence.EntityManager"] }, {"name":"findAll","parameterTypes":[] }, {"name":"findByNameIgnoreCase","parameterTypes":["java.lang.String"] }, {"name":"findByRoles_NameAndState","parameterTypes":["java.lang.String","edu.ucmo.cbbackend.model.ChangeRequestState","org.springframework.data.domain.Pageable"] }, {"name":"findByUsername","parameterTypes":["java.lang.String"] }]
 },
 {
   "name":"org.springframework.data.jpa.util.HibernateProxyDetector",
@@ -11199,9 +11204,6 @@
 },
 {
   "name":"org.springframework.http.ResponseEntity$BodyBuilder"
-},
-{
-  "name":"org.springframework.http.ResponseEntity$HeadersBuilder"
 },
 {
   "name":"org.springframework.http.client.observation.ClientRequestObservationConvention"
