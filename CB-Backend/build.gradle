@@ -49,11 +49,14 @@ tasks.named('test') {
 bootBuildImage {
     imageName = "cbbackend"
 
+
 }
-
-
 
 rewrite {
     activeRecipe("org.openrewrite.java.spring.security6.UpgradeSpringSecurity_6_0")
 }
 
+
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs.add("-parameters")
+}
