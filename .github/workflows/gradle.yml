@@ -20,7 +20,7 @@ jobs:
           submodules: true
       #Build Image
       - name: Build Image
-        run: ./CB-Backend/gradlew bootBuildImage
+        run: cd CB-Backend && ./gradlew bootBuildImage --imageName=ianworleyxyz/cbbackend
       #Login to DockerHub
       - name: Login to DockerHub
         uses: docker/login-action@v2
