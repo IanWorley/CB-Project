@@ -90,7 +90,7 @@
     "interfaces":["org.springframework.jdbc.datasource.ConnectionProxy"]
   },
   {
-    "interfaces":["org.springframework.stereotype.Controller"]
+    "interfaces":["org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity"]
   },
   {
     "interfaces":["org.springframework.web.bind.annotation.ControllerAdvice"]
@@ -99,27 +99,12 @@
     "interfaces":["org.springframework.web.bind.annotation.CrossOrigin"]
   },
   {
-    "interfaces":["org.springframework.web.bind.annotation.DeleteMapping"]
-  },
-  {
-    "interfaces":["org.springframework.web.bind.annotation.GetMapping"]
-  },
-  {
     "interfaces":["org.springframework.web.bind.annotation.PathVariable"]
-  },
-  {
-    "interfaces":["org.springframework.web.bind.annotation.PostMapping"]
-  },
-  {
-    "interfaces":["org.springframework.web.bind.annotation.PutMapping"]
   },
   {
     "interfaces":["org.springframework.web.bind.annotation.RequestMapping"]
   },
   {
     "interfaces":["org.springframework.web.bind.annotation.RequestParam"]
-  },
-  {
-    "interfaces":["org.springframework.web.bind.annotation.RestController"]
   }
 ]
