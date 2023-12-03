@@ -73,7 +73,7 @@ public class Runner implements CommandLineRunner {
             User user = new User();
             user.setRoles(rolesRepository.findByNameIgnoreCase("USER"));
                 if (userInfo.name().length() > 20){
-                  user.setUsername(userInfo.name().replace(" ", "_") .substring(0, 15));
+                  user.setUsername(userInfo.name().replace(" ", "_") .substring(0, 19));
                 }else {
                     user.setUsername(userInfo.name().replace(" ", "_"));
                 }

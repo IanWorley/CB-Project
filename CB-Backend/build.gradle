@@ -3,6 +3,7 @@ plugins {
     id 'org.springframework.boot' version '3.2.0'
     id 'io.spring.dependency-management' version '1.1.4'
     id 'org.graalvm.buildtools.native' version '0.9.28'
+    id("org.openrewrite.rewrite") version("6.5.6")
 }
 
 group = 'edu.ucmo'
@@ -36,7 +37,10 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    rewrite("org.openrewrite.recipe:rewrite-spring:5.1.2")
 }
+
+
 
 tasks.named('test') {
     useJUnitPlatform()
@@ -46,3 +50,10 @@ bootBuildImage {
     imageName = "cbbackend"
 
 }
+
+
+
+rewrite {
+    activeRecipe("org.openrewrite.java.spring.security6.UpgradeSpringSecurity_6_0")
+}
+

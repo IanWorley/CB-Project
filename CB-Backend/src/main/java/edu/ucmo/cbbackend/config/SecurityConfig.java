@@ -1,6 +1,7 @@
 package edu.ucmo.cbbackend.config;
 
 import com.nimbusds.jose.jwk.JWK;
+import com.nimbusds.jose.jwk.JWK;
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;
 import com.nimbusds.jose.jwk.source.ImmutableJWKSet;
@@ -12,7 +13,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.authentication.configurers.userdetails.DaoAuthenticationConfigurer;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
@@ -32,7 +33,7 @@ import static org.springframework.security.config.Customizer.withDefaults;
 @EnableWebSecurity
 
 @Configuration
-@EnableGlobalMethodSecurity(prePostEnabled = true)
+@EnableMethodSecurity
 public class SecurityConfig {
     private final RsaKeyProperties rsaKeys;
 
@@ -111,15 +112,16 @@ public class SecurityConfig {
     SecurityFilterChain swaggerSecurityFilterChain(HttpSecurity http) throws Exception {
         return http.securityMatcher(AntPathRequestMatcher.antMatcher("/swagger-ui/**")).authorizeHttpRequests(auth -> {
             auth.requestMatchers(AntPathRequestMatcher.antMatcher("/swagger-ui/**")).permitAll();
-        }).csrf(csrf -> csrf.ignoringRequestMatchers(AntPathRequestMatcher.antMatcher("/swagger-ui/**"))).headers(headers -> headers.frameOptions().disable()).build();
+        }).csrf(csrf -> csrf.ignoringRequestMatchers(AntPathRequestMatcher.antMatcher("/swagger-ui/**"))).build();
     }
 
     @Bean
     @Order(1)
     SecurityFilterChain openApiSecurityFilterChain(HttpSecurity http) throws Exception {
         return http.securityMatcher(AntPathRequestMatcher.antMatcher("/v3/api-docs/**")).authorizeHttpRequests(auth -> {
+            auth.requestMatchers(AntPathRequestMatcher.antMatcher("/v3/api-docs")).permitAll();
             auth.requestMatchers(AntPathRequestMatcher.antMatcher("/v3/api-docs/**")).permitAll();
-        }).csrf(csrf -> csrf.ignoringRequestMatchers(AntPathRequestMatcher.antMatcher("/v3/api-docs/**"))).headers(headers -> headers.frameOptions().disable()).build();
+        }).csrf(csrf -> csrf.ignoringRequestMatchers(AntPathRequestMatcher.antMatcher("/v3/api-docs/**"))).build();
     }
 
 
