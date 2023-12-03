@@ -40,3 +40,9 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+bootBuildImage {
+    environment = ["BP_NATIVE_IMAGE": "false"]
+    imageName = "cbbackend"
+
+}
