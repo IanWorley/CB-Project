@@ -57,16 +57,17 @@ public class UserController {
             @ApiResponse(responseCode = "400", description = "Return a String of 'User id must be null'", content = @Content),
     })
     @PostMapping("/api/v1/user")
-    public ResponseEntity<?> createUser(@RequestBody User user) {
+    public ResponseEntity<?> createUser(@RequestBody UserRegisterRequest user) {
         if (userRepository.findByUsername(user.getUsername()) != null) {
             return ResponseEntity.badRequest().body("Username is already taken");
         }
         if (user.getId() != null)
-            return ResponseEntity.badRequest().body("User id must be null"); // TODO: could add model or class that does not define id
+            return ResponseEntity.badRequest().body("User id must be null"); // TODO: could add model or class that does not define id}
 
         try {
-            userService.save(user);
-            return ResponseEntity.ok().body(new UserResponse(user));
+         User  userEnity  =   userService.toEntity(user);
+        userService.save(userEnity);
+            return ResponseEntity.ok().body(userService.toDto(userEnity));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.toString());
         }
@@ -118,7 +119,7 @@ public class UserController {
 
         userService.save(userToUpdate);
 
-        return ResponseEntity.ok().body(new UserResponse(userToUpdate));
+        return ResponseEntity.ok().body(userService.toDto(userToUpdate));
     }
 
     @SecurityRequirement(name = "jwtAuth")
@@ -126,6 +127,6 @@ public class UserController {
     public ResponseEntity<?> getCurrentUser(HttpServletRequest request) {
         Principal principal = request.getUserPrincipal();
         User userData  =  userService.loadUserByUsername(principal.getName());
-             return ResponseEntity.ok().body(new UserResponse(userData));
+             return ResponseEntity.ok().body(userService.toDto(userData));
     }
 }

@@ -37,13 +37,12 @@ public class ChangeRequest implements Serializable {
     @Column(nullable = false)
     private Long applicationId;
 
-    @Column(nullable = false, columnDefinition = "BLOB")
-    @Lob
+    @Column(nullable = false)
+
 
     private String description;
 
-    @Lob
-    @Column(nullable = false, columnDefinition = "BLOB")
+    @Column(nullable = false)
     private String reason;
 
     @Column(nullable = false)
@@ -98,8 +97,8 @@ public class ChangeRequest implements Serializable {
     @Enumerated(EnumType.STRING)
     private ChangeRequestRiskLevel riskLevel;
 
-    @Column(nullable = false, columnDefinition = "BLOB")
-    @Lob
+    @Column(nullable = false)
+
     private String backoutPlan;
 
 }
