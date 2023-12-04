@@ -977,9 +977,6 @@
   "name":"edu.ucmo.cbbackend.dto.response.ChangeRequestHttpResponseDTO"
 },
 {
-  "name":"edu.ucmo.cbbackend.dto.response.UserResponse"
-},
-{
   "name":"edu.ucmo.cbbackend.model.ChangeRequest",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
