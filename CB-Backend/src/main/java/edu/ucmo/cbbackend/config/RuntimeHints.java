@@ -17,6 +17,7 @@ class MyRuntimeHints {
             hints.resources().registerPattern("jwtprivate.pem");
             hints.resources().registerPattern("jwtpub.pem");
 
+
         }
     }
 }

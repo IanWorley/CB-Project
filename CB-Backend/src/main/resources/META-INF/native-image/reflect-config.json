@@ -1,11 +1,4 @@
 [
-
-    {
-      "name":"edu.ucmo.cbbackend.dto.response.UserResponse",
-      "allDeclaredMethods":true,
-      "allPublicMethods":true
-    },
-
 {
   "name":"[B"
 },
@@ -174,6 +167,9 @@
   "methods":[{"name":"<init>","parameterTypes":["java.lang.String"] }, {"name":"from","parameterTypes":["java.lang.String"] }, {"name":"of","parameterTypes":["java.lang.String"] }, {"name":"valueOf","parameterTypes":["java.lang.String"] }]
 },
 {
+  "name":"[Lorg.springframework.data.domain.Sort$Order;"
+},
+{
   "name":"[Lorg.springframework.jmx.export.metadata.ManagedOperationParameter;"
 },
 {
@@ -271,6 +267,9 @@
   "methods":[{"name":"value","parameterTypes":[] }]
 },
 {
+  "name":"com.fasterxml.jackson.annotation.JsonInclude"
+},
+{
   "name":"com.fasterxml.jackson.annotation.JsonInclude$Include",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
@@ -327,7 +326,7 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"getJsonFactory","parameterTypes":[] }, {"name":"readValues","parameterTypes":["com.fasterxml.jackson.core.JsonParser","com.fasterxml.jackson.core.type.ResolvedType"] }, {"name":"readValues","parameterTypes":["com.fasterxml.jackson.core.JsonParser","com.fasterxml.jackson.core.type.TypeReference"] }, {"name":"readValues","parameterTypes":["com.fasterxml.jackson.core.JsonParser","java.lang.Class"] }]
+  "methods":[{"name":"getJsonFactory","parameterTypes":[] }, {"name":"readValues","parameterTypes":["com.fasterxml.jackson.core.JsonParser","com.fasterxml.jackson.core.type.ResolvedType"] }, {"name":"readValues","parameterTypes":["com.fasterxml.jackson.core.JsonParser","java.lang.Class"] }]
 },
 {
   "name":"com.fasterxml.jackson.core.PrettyPrinter"
@@ -855,7 +854,7 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"execute","parameterTypes":["org.aspectj.lang.ProceedingJoinPoint"] }]
 },
 {
   "name":"edu.ucmo.cbbackend.config.MyRuntimeHints",
@@ -926,7 +925,7 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":["edu.ucmo.cbbackend.service.TokenService","edu.ucmo.cbbackend.service.UserService"] }]
+  "methods":[{"name":"<init>","parameterTypes":["edu.ucmo.cbbackend.service.TokenService","edu.ucmo.cbbackend.service.UserService"] }, {"name":"login","parameterTypes":["edu.ucmo.cbbackend.dto.request.LoginRequest"] }]
 },
 {
   "name":"edu.ucmo.cbbackend.controller.AuthController$$SpringCGLIB$$0"
@@ -936,7 +935,7 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":["edu.ucmo.cbbackend.service.ChangeService","edu.ucmo.cbbackend.service.UserService","edu.ucmo.cbbackend.repository.RolesRepository"] }]
+  "methods":[{"name":"<init>","parameterTypes":["edu.ucmo.cbbackend.service.ChangeService","edu.ucmo.cbbackend.service.UserService","edu.ucmo.cbbackend.repository.RolesRepository"] }, {"name":"getChange","parameterTypes":["jakarta.servlet.http.HttpServletRequest","java.lang.Integer","java.lang.Integer","java.lang.Boolean","java.lang.String"] }]
 },
 {
   "name":"edu.ucmo.cbbackend.controller.ChangeController$$SpringCGLIB$$0"
@@ -956,7 +955,7 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":["edu.ucmo.cbbackend.repository.UserRepository","edu.ucmo.cbbackend.service.UserService"] }]
+  "methods":[{"name":"<init>","parameterTypes":["edu.ucmo.cbbackend.repository.UserRepository","edu.ucmo.cbbackend.service.UserService"] }, {"name":"createUser","parameterTypes":["edu.ucmo.cbbackend.dto.request.UserRegisterRequest"] }, {"name":"deleteUserById","parameterTypes":["java.lang.Long"] }, {"name":"getCurrentUser","parameterTypes":["jakarta.servlet.http.HttpServletRequest"] }]
 },
 {
   "name":"edu.ucmo.cbbackend.controller.UserController$$SpringCGLIB$$0"
@@ -965,16 +964,35 @@
   "name":"edu.ucmo.cbbackend.dto.request.ChangeRequestBodyDTO"
 },
 {
-  "name":"edu.ucmo.cbbackend.dto.request.LoginRequest"
+  "name":"edu.ucmo.cbbackend.dto.request.LoginRequest",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"setPassword","parameterTypes":["java.lang.String"] }, {"name":"setUsername","parameterTypes":["java.lang.String"] }]
 },
 {
   "name":"edu.ucmo.cbbackend.dto.request.UserEditRequest"
 },
 {
-  "name":"edu.ucmo.cbbackend.dto.request.UserRegisterRequest"
+  "name":"edu.ucmo.cbbackend.dto.request.UserRegisterRequest",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"setPassword","parameterTypes":["java.lang.String"] }, {"name":"setRoles","parameterTypes":["java.lang.String"] }, {"name":"setUsername","parameterTypes":["java.lang.String"] }]
 },
 {
-  "name":"edu.ucmo.cbbackend.dto.response.ChangeRequestHttpResponseDTO"
+  "name":"edu.ucmo.cbbackend.dto.response.ChangeRequestHttpResponseDTO",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"getApplicationId","parameterTypes":[] }, {"name":"getApproveOrDeny","parameterTypes":[] }, {"name":"getAuthorId","parameterTypes":[] }, {"name":"getAuthorUserName","parameterTypes":[] }, {"name":"getBackoutPlan","parameterTypes":[] }, {"name":"getChangeType","parameterTypes":[] }, {"name":"getDateCreated","parameterTypes":[] }, {"name":"getDateUpdated","parameterTypes":[] }, {"name":"getDescription","parameterTypes":[] }, {"name":"getId","parameterTypes":[] }, {"name":"getImplementer","parameterTypes":[] }, {"name":"getReason","parameterTypes":[] }, {"name":"getRiskLevel","parameterTypes":[] }, {"name":"getRoles","parameterTypes":[] }, {"name":"getState","parameterTypes":[] }, {"name":"getTimeToRevert","parameterTypes":[] }, {"name":"getTimeWindowEnd","parameterTypes":[] }, {"name":"getTimeWindowStart","parameterTypes":[] }]
+},
+{
+  "name":"edu.ucmo.cbbackend.dto.response.UserResponse",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"getChangeRequestsId","parameterTypes":[] }, {"name":"getId","parameterTypes":[] }, {"name":"getRole","parameterTypes":[] }, {"name":"getUsername","parameterTypes":[] }]
 },
 {
   "name":"edu.ucmo.cbbackend.model.ChangeRequest",
@@ -985,19 +1003,27 @@
   "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"equals","parameterTypes":["java.lang.Object"] }, {"name":"getId","parameterTypes":[] }, {"name":"setId","parameterTypes":["java.lang.Long"] }]
 },
 {
-  "name":"edu.ucmo.cbbackend.model.ChangeRequestApproveOrDeny"
+  "name":"edu.ucmo.cbbackend.model.ChangeRequestApproveOrDeny",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true
 },
 {
-  "name":"edu.ucmo.cbbackend.model.ChangeRequestRiskLevel"
+  "name":"edu.ucmo.cbbackend.model.ChangeRequestRiskLevel",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true
 },
 {
-  "name":"edu.ucmo.cbbackend.model.ChangeRequestState"
+  "name":"edu.ucmo.cbbackend.model.ChangeRequestState",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true
 },
 {
   "name":"edu.ucmo.cbbackend.model.ChangeRequest_"
 },
 {
-  "name":"edu.ucmo.cbbackend.model.ChangeType"
+  "name":"edu.ucmo.cbbackend.model.ChangeType",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true
 },
 {
   "name":"edu.ucmo.cbbackend.model.Roles",
@@ -1005,7 +1031,7 @@
   "queryAllDeclaredMethods":true,
   "queryAllPublicMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"equals","parameterTypes":["java.lang.Object"] }, {"name":"getId","parameterTypes":[] }, {"name":"setId","parameterTypes":["java.lang.Long"] }]
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"equals","parameterTypes":["java.lang.Object"] }, {"name":"getId","parameterTypes":[] }, {"name":"getName","parameterTypes":[] }, {"name":"setId","parameterTypes":["java.lang.Long"] }]
 },
 {
   "name":"edu.ucmo.cbbackend.model.Roles_"
@@ -1710,7 +1736,8 @@
   "name":"io.swagger.v3.oas.models.Paths"
 },
 {
-  "name":"io.swagger.v3.oas.models.SpecVersion"
+  "name":"io.swagger.v3.oas.models.SpecVersion",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
   "name":"io.swagger.v3.oas.models.examples.Example"
@@ -1908,7 +1935,7 @@
 {
   "name":"jakarta.persistence.ManyToOne",
   "queryAllDeclaredMethods":true,
-  "methods":[{"name":"targetEntity","parameterTypes":[] }, {"name":"value","parameterTypes":[] }]
+  "methods":[{"name":"optional","parameterTypes":[] }, {"name":"targetEntity","parameterTypes":[] }, {"name":"value","parameterTypes":[] }]
 },
 {
   "name":"jakarta.persistence.OneToMany",
@@ -2104,6 +2131,9 @@
   "name":"jakarta.validation.bootstrap.GenericBootstrap"
 },
 {
+  "name":"jakarta.validation.constraints.FutureOrPresent"
+},
+{
   "name":"jakarta.validation.constraints.Min",
   "queryAllDeclaredMethods":true,
   "methods":[{"name":"value","parameterTypes":[] }]
@@ -2112,6 +2142,9 @@
   "name":"jakarta.validation.constraints.NotBlank",
   "queryAllDeclaredMethods":true,
   "methods":[{"name":"value","parameterTypes":[] }]
+},
+{
+  "name":"jakarta.validation.constraints.PositiveOrZero"
 },
 {
   "name":"jakarta.validation.executable.ExecutableValidator"
@@ -2160,6 +2193,9 @@
 },
 {
   "name":"java.io.OutputStream"
+},
+{
+  "name":"java.io.PrintStream"
 },
 {
   "name":"java.io.PrintWriter"
@@ -2221,6 +2257,14 @@
   "name":"java.lang.CloneNotSupportedException"
 },
 {
+  "name":"java.lang.Cloneable",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"java.lang.Comparable",
+  "queryAllDeclaredMethods":true
+},
+{
   "name":"java.lang.Deprecated",
   "queryAllPublicMethods":true
 },
@@ -2266,6 +2310,7 @@
 },
 {
   "name":"java.lang.Long",
+  "queryAllDeclaredMethods":true,
   "fields":[{"name":"TYPE"}]
 },
 {
@@ -2652,6 +2697,9 @@
   "name":"java.security.AllPermission"
 },
 {
+  "name":"java.security.Principal"
+},
+{
   "name":"java.security.SecureClassLoader",
   "queryAllDeclaredMethods":true
 },
@@ -2684,6 +2732,9 @@
   "name":"java.sql.ConnectionBuilder"
 },
 {
+  "name":"java.sql.Date"
+},
+{
   "name":"java.sql.Driver"
 },
 {
@@ -2696,7 +2747,8 @@
   "name":"java.sql.ResultSet"
 },
 {
-  "name":"java.sql.SQLException"
+  "name":"java.sql.SQLException",
+  "fields":[{"name":"next"}]
 },
 {
   "name":"java.sql.SQLFeatureNotSupportedException"
@@ -2711,7 +2763,10 @@
   "name":"java.sql.Statement"
 },
 {
-  "name":"java.sql.Timestamp"
+  "name":"java.sql.Timestamp",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
 },
 {
   "name":"java.sql.Types",
@@ -2736,6 +2791,9 @@
   "name":"java.time.DurationEditor"
 },
 {
+  "name":"java.time.temporal.ChronoUnit"
+},
+{
   "name":"java.time.temporal.TemporalUnit"
 },
 {
@@ -2748,7 +2806,9 @@
   "name":"java.util.Comparator"
 },
 {
-  "name":"java.util.Date"
+  "name":"java.util.Date",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true
 },
 {
   "name":"java.util.EnumSet"
@@ -2761,6 +2821,10 @@
   "queryAllDeclaredMethods":true,
   "queryAllPublicMethods":true,
   "queryAllDeclaredConstructors":true
+},
+{
+  "name":"java.util.HashMap",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
   "name":"java.util.HashSet"
@@ -2815,7 +2879,8 @@
   "name":"java.util.concurrent.BlockingQueue"
 },
 {
-  "name":"java.util.concurrent.Callable"
+  "name":"java.util.concurrent.Callable",
+  "methods":[{"name":"call","parameterTypes":[] }]
 },
 {
   "name":"java.util.concurrent.CompletableFuture"
@@ -2925,6 +2990,9 @@
 },
 {
   "name":"java.util.stream.Collector"
+},
+{
+  "name":"java.util.stream.Collectors"
 },
 {
   "name":"java.util.stream.Stream"
@@ -4209,7 +4277,7 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"additionalModelsConverter","parameterTypes":["org.springdoc.core.providers.ObjectMapperProvider"] }, {"name":"fileSupportConverter","parameterTypes":["org.springdoc.core.providers.ObjectMapperProvider"] }, {"name":"genericReturnTypeParser","parameterTypes":[] }, {"name":"localSpringDocParameterNameDiscoverer","parameterTypes":[] }, {"name":"modelConverterRegistrar","parameterTypes":["java.util.Optional"] }, {"name":"openAPIBuilder","parameterTypes":["java.util.Optional","org.springdoc.core.service.SecurityService","org.springdoc.core.properties.SpringDocConfigProperties","org.springdoc.core.utils.PropertyResolverUtils","java.util.Optional","java.util.Optional","java.util.Optional"] }, {"name":"operationBuilder","parameterTypes":["org.springdoc.core.service.GenericParameterService","org.springdoc.core.service.RequestBodyService","org.springdoc.core.service.SecurityService","org.springdoc.core.utils.PropertyResolverUtils"] }, {"name":"parameterBuilder","parameterTypes":["org.springdoc.core.utils.PropertyResolverUtils","java.util.Optional","java.util.Optional","org.springdoc.core.providers.ObjectMapperProvider","java.util.Optional"] }, {"name":"polymorphicModelConverter","parameterTypes":["org.springdoc.core.providers.ObjectMapperProvider"] }, {"name":"propertyResolverUtils","parameterTypes":["org.springframework.beans.factory.config.ConfigurableBeanFactory","org.springframework.context.MessageSource","org.springdoc.core.properties.SpringDocConfigProperties"] }, {"name":"requestBodyBuilder","parameterTypes":["org.springdoc.core.service.GenericParameterService"] }, {"name":"responseSupportConverter","parameterTypes":["org.springdoc.core.providers.ObjectMapperProvider"] }, {"name":"schemaPropertyDeprecatingConverter","parameterTypes":[] }, {"name":"securityParser","parameterTypes":["org.springdoc.core.utils.PropertyResolverUtils"] }, {"name":"springDocCustomizers","parameterTypes":["java.util.Optional","java.util.Optional","java.util.Optional","java.util.Optional","java.util.Optional","java.util.Optional","java.util.Optional","java.util.Optional"] }, {"name":"springDocProviders","parameterTypes":["java.util.Optional","java.util.Optional","java.util.Optional","java.util.Optional","java.util.Optional","java.util.Optional","java.util.Optional","org.springdoc.core.providers.ObjectMapperProvider"] }, {"name":"springdocObjectMapperProvider","parameterTypes":["org.springdoc.core.properties.SpringDocConfigProperties"] }]
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"additionalModelsConverter","parameterTypes":["org.springdoc.core.providers.ObjectMapperProvider"] }, {"name":"fileSupportConverter","parameterTypes":["org.springdoc.core.providers.ObjectMapperProvider"] }, {"name":"genericReturnTypeParser","parameterTypes":[] }, {"name":"localSpringDocParameterNameDiscoverer","parameterTypes":[] }, {"name":"modelConverterRegistrar","parameterTypes":["java.util.Optional","org.springdoc.core.properties.SpringDocConfigProperties"] }, {"name":"openAPIBuilder","parameterTypes":["java.util.Optional","org.springdoc.core.service.SecurityService","org.springdoc.core.properties.SpringDocConfigProperties","org.springdoc.core.utils.PropertyResolverUtils","java.util.Optional","java.util.Optional","java.util.Optional"] }, {"name":"operationBuilder","parameterTypes":["org.springdoc.core.service.GenericParameterService","org.springdoc.core.service.RequestBodyService","org.springdoc.core.service.SecurityService","org.springdoc.core.utils.PropertyResolverUtils"] }, {"name":"parameterBuilder","parameterTypes":["org.springdoc.core.utils.PropertyResolverUtils","java.util.Optional","java.util.Optional","org.springdoc.core.providers.ObjectMapperProvider","java.util.Optional"] }, {"name":"polymorphicModelConverter","parameterTypes":["org.springdoc.core.providers.ObjectMapperProvider"] }, {"name":"propertyResolverUtils","parameterTypes":["org.springframework.beans.factory.config.ConfigurableBeanFactory","org.springframework.context.MessageSource","org.springdoc.core.properties.SpringDocConfigProperties"] }, {"name":"requestBodyBuilder","parameterTypes":["org.springdoc.core.service.GenericParameterService"] }, {"name":"responseSupportConverter","parameterTypes":["org.springdoc.core.providers.ObjectMapperProvider"] }, {"name":"schemaPropertyDeprecatingConverter","parameterTypes":[] }, {"name":"securityParser","parameterTypes":["org.springdoc.core.utils.PropertyResolverUtils"] }, {"name":"springDocCustomizers","parameterTypes":["java.util.Optional","java.util.Optional","java.util.Optional","java.util.Optional","java.util.Optional","java.util.Optional","java.util.Optional","java.util.Optional"] }, {"name":"springDocProviders","parameterTypes":["java.util.Optional","java.util.Optional","java.util.Optional","java.util.Optional","java.util.Optional","java.util.Optional","java.util.Optional","org.springdoc.core.providers.ObjectMapperProvider"] }, {"name":"springdocObjectMapperProvider","parameterTypes":["org.springdoc.core.properties.SpringDocConfigProperties"] }]
 },
 {
   "name":"org.springdoc.core.configuration.SpringDocConfiguration$1",
@@ -4229,7 +4297,7 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"queryDslQuerydslPredicateOperationCustomizer","parameterTypes":["java.util.Optional"] }]
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"queryDslQuerydslPredicateOperationCustomizer","parameterTypes":["java.util.Optional","org.springdoc.core.properties.SpringDocConfigProperties"] }]
 },
 {
   "name":"org.springdoc.core.configuration.SpringDocConfiguration$SpringDocSpringDataWebPropertiesProvider",
@@ -10448,6 +10516,18 @@
   "name":"org.springframework.data.cassandra.ReactiveSession"
 },
 {
+  "name":"org.springframework.data.domain.AbstractPageRequest",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"getOffset","parameterTypes":[] }, {"name":"getPageNumber","parameterTypes":[] }, {"name":"getPageSize","parameterTypes":[] }]
+},
+{
+  "name":"org.springframework.data.domain.Chunk",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"getContent","parameterTypes":[] }, {"name":"getNumber","parameterTypes":[] }, {"name":"getNumberOfElements","parameterTypes":[] }, {"name":"getSize","parameterTypes":[] }, {"name":"getSort","parameterTypes":[] }, {"name":"isFirst","parameterTypes":[] }]
+},
+{
   "name":"org.springframework.data.domain.Example"
 },
 {
@@ -10457,13 +10537,39 @@
   "name":"org.springframework.data.domain.OffsetScrollPosition"
 },
 {
-  "name":"org.springframework.data.domain.Page"
+  "name":"org.springframework.data.domain.Page",
+  "queryAllDeclaredMethods":true
 },
 {
-  "name":"org.springframework.data.domain.Pageable"
+  "name":"org.springframework.data.domain.PageImpl",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"getTotalElements","parameterTypes":[] }, {"name":"getTotalPages","parameterTypes":[] }, {"name":"isLast","parameterTypes":[] }]
 },
 {
-  "name":"org.springframework.data.domain.Sort"
+  "name":"org.springframework.data.domain.PageRequest",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"getSort","parameterTypes":[] }]
+},
+{
+  "name":"org.springframework.data.domain.Pageable",
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"isPaged","parameterTypes":[] }, {"name":"isUnpaged","parameterTypes":[] }]
+},
+{
+  "name":"org.springframework.data.domain.Slice",
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"getPageable","parameterTypes":[] }]
+},
+{
+  "name":"org.springframework.data.domain.Sort",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"isEmpty","parameterTypes":[] }, {"name":"isSorted","parameterTypes":[] }, {"name":"isUnsorted","parameterTypes":[] }]
 },
 {
   "name":"org.springframework.data.elasticsearch.client.elc.ElasticsearchTemplate"
@@ -10578,7 +10684,7 @@
   "queryAllDeclaredMethods":true,
   "queryAllPublicMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":["org.springframework.data.jpa.repository.support.JpaEntityInformation","jakarta.persistence.EntityManager"] }, {"name":"findAll","parameterTypes":[] }, {"name":"findByNameIgnoreCase","parameterTypes":["java.lang.String"] }]
+  "methods":[{"name":"<init>","parameterTypes":["org.springframework.data.jpa.repository.support.JpaEntityInformation","jakarta.persistence.EntityManager"] }, {"name":"deleteById","parameterTypes":["java.lang.Object"] }, {"name":"findAll","parameterTypes":[] }, {"name":"findById","parameterTypes":["java.lang.Object"] }, {"name":"findByNameIgnoreCase","parameterTypes":["java.lang.String"] }, {"name":"findByRoles_NameAndState","parameterTypes":["java.lang.String","edu.ucmo.cbbackend.model.ChangeRequestState","org.springframework.data.domain.Pageable"] }, {"name":"findByUsername","parameterTypes":["java.lang.String"] }, {"name":"save","parameterTypes":["java.lang.Object"] }]
 },
 {
   "name":"org.springframework.data.jpa.util.HibernateProxyDetector",
@@ -11104,6 +11210,12 @@
 },
 {
   "name":"org.springframework.http.ResponseEntity"
+},
+{
+  "name":"org.springframework.http.ResponseEntity$BodyBuilder"
+},
+{
+  "name":"org.springframework.http.ResponseEntity$HeadersBuilder"
 },
 {
   "name":"org.springframework.http.client.observation.ClientRequestObservationConvention"
@@ -12088,6 +12200,9 @@
   "name":"org.springframework.security.core.GrantedAuthority"
 },
 {
+  "name":"org.springframework.security.core.authority.SimpleGrantedAuthority"
+},
+{
   "name":"org.springframework.security.core.context.SecurityContextHolderStrategy"
 },
 {
@@ -12143,6 +12258,9 @@
 },
 {
   "name":"org.springframework.security.oauth2.jwt.JwtClaimsSet"
+},
+{
+  "name":"org.springframework.security.oauth2.jwt.JwtClaimsSet$Builder"
 },
 {
   "name":"org.springframework.security.oauth2.jwt.JwtDecoder",
@@ -13636,6 +13754,10 @@
 },
 {
   "name":"sun.security.rsa.RSAKeyFactory$Legacy",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.rsa.RSASignature$SHA256withRSA",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
