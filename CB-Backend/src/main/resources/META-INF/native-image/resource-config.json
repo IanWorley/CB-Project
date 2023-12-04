@@ -553,7 +553,7 @@
   }, {
     "pattern":"\\Qorg/springframework/boot/CommandLineRunner.class\\E"
   }, {
-    "pattern":"\\Qorg/springframework/boot/LazyInitializationExcludeFilter$$Lambda/0x00007f9b8ca28f68.class\\E"
+    "pattern":"\\Qorg/springframework/boot/LazyInitializationExcludeFilter$$Lambda/0x00007f8dd0a37c78.class\\E"
   }, {
     "pattern":"\\Qorg/springframework/boot/LazyInitializationExcludeFilter.class\\E"
   }, {
@@ -589,7 +589,7 @@
   }, {
     "pattern":"\\Qorg/springframework/boot/actuate/autoconfigure/endpoint/expose/IncludeExcludeEndpointFilter.class\\E"
   }, {
-    "pattern":"\\Qorg/springframework/boot/actuate/autoconfigure/endpoint/jackson/JacksonEndpointAutoConfiguration$$Lambda/0x00007f9b8c95a8e8.class\\E"
+    "pattern":"\\Qorg/springframework/boot/actuate/autoconfigure/endpoint/jackson/JacksonEndpointAutoConfiguration$$Lambda/0x00007f8dd0962d70.class\\E"
   }, {
     "pattern":"\\Qorg/springframework/boot/actuate/autoconfigure/endpoint/jackson/JacksonEndpointAutoConfiguration.class\\E"
   }, {
@@ -873,7 +873,7 @@
   }, {
     "pattern":"\\Qorg/springframework/boot/actuate/autoconfigure/web/servlet/ServletManagementChildContextConfiguration.class\\E"
   }, {
-    "pattern":"\\Qorg/springframework/boot/actuate/autoconfigure/web/servlet/ServletManagementContextAutoConfiguration$$Lambda/0x00007f9b8ca1ebd0.class\\E"
+    "pattern":"\\Qorg/springframework/boot/actuate/autoconfigure/web/servlet/ServletManagementContextAutoConfiguration$$Lambda/0x00007f8dd0a2e760.class\\E"
   }, {
     "pattern":"\\Qorg/springframework/boot/actuate/autoconfigure/web/servlet/ServletManagementContextAutoConfiguration$ApplicationContextFilterConfiguration.class\\E"
   }, {
@@ -1071,9 +1071,9 @@
   }, {
     "pattern":"\\Qorg/springframework/boot/autoconfigure/data/jpa/JpaRepositoriesRegistrar.class\\E"
   }, {
-    "pattern":"\\Qorg/springframework/boot/autoconfigure/data/web/SpringDataWebAutoConfiguration$$Lambda/0x00007f9b8c9ec3c0.class\\E"
+    "pattern":"\\Qorg/springframework/boot/autoconfigure/data/web/SpringDataWebAutoConfiguration$$Lambda/0x00007f8dd09fc128.class\\E"
   }, {
-    "pattern":"\\Qorg/springframework/boot/autoconfigure/data/web/SpringDataWebAutoConfiguration$$Lambda/0x00007f9b8c9ed120.class\\E"
+    "pattern":"\\Qorg/springframework/boot/autoconfigure/data/web/SpringDataWebAutoConfiguration$$Lambda/0x00007f8dd09fce88.class\\E"
   }, {
     "pattern":"\\Qorg/springframework/boot/autoconfigure/data/web/SpringDataWebAutoConfiguration.class\\E"
   }, {
@@ -1183,7 +1183,7 @@
   }, {
     "pattern":"\\Qorg/springframework/boot/autoconfigure/jdbc/metadata/DataSourcePoolMetadataProvidersConfiguration$CommonsDbcp2PoolDataSourceMetadataProviderConfiguration.class\\E"
   }, {
-    "pattern":"\\Qorg/springframework/boot/autoconfigure/jdbc/metadata/DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration$$Lambda/0x00007f9b8c53f228.class\\E"
+    "pattern":"\\Qorg/springframework/boot/autoconfigure/jdbc/metadata/DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration$$Lambda/0x00007f8dd0547b60.class\\E"
   }, {
     "pattern":"\\Qorg/springframework/boot/autoconfigure/jdbc/metadata/DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration.class\\E"
   }, {
@@ -1281,7 +1281,7 @@
   }, {
     "pattern":"\\Qorg/springframework/boot/autoconfigure/session/SessionAutoConfiguration$ReactiveSessionConfiguration.class\\E"
   }, {
-    "pattern":"\\Qorg/springframework/boot/autoconfigure/session/SessionAutoConfiguration$ServletSessionConfiguration$RememberMeServicesConfiguration$$Lambda/0x00007f9b8ca394b0.class\\E"
+    "pattern":"\\Qorg/springframework/boot/autoconfigure/session/SessionAutoConfiguration$ServletSessionConfiguration$RememberMeServicesConfiguration$$Lambda/0x00007f8dd0a49740.class\\E"
   }, {
     "pattern":"\\Qorg/springframework/boot/autoconfigure/session/SessionAutoConfiguration$ServletSessionConfiguration$RememberMeServicesConfiguration.class\\E"
   }, {
@@ -1527,7 +1527,7 @@
   }, {
     "pattern":"\\Qorg/springframework/boot/devtools/autoconfigure/LocalDevToolsAutoConfiguration$LiveReloadServerEventListener.class\\E"
   }, {
-    "pattern":"\\Qorg/springframework/boot/devtools/autoconfigure/LocalDevToolsAutoConfiguration$RestartConfiguration$$Lambda/0x00007f9b8ca3ead8.class\\E"
+    "pattern":"\\Qorg/springframework/boot/devtools/autoconfigure/LocalDevToolsAutoConfiguration$RestartConfiguration$$Lambda/0x00007f8dd0a4ed68.class\\E"
   }, {
     "pattern":"\\Qorg/springframework/boot/devtools/autoconfigure/LocalDevToolsAutoConfiguration$RestartConfiguration.class\\E"
   }, {
@@ -1577,7 +1577,7 @@
   }, {
     "pattern":"\\Qorg/springframework/boot/task/ThreadPoolTaskSchedulerBuilder.class\\E"
   }, {
-    "pattern":"\\Qorg/springframework/boot/validation/beanvalidation/MethodValidationExcludeFilter$$Lambda/0x00007f9b8c9e34f0.class\\E"
+    "pattern":"\\Qorg/springframework/boot/validation/beanvalidation/MethodValidationExcludeFilter$$Lambda/0x00007f8dd09f30b8.class\\E"
   }, {
     "pattern":"\\Qorg/springframework/boot/validation/beanvalidation/MethodValidationExcludeFilter.class\\E"
   }, {
@@ -2130,16 +2130,10 @@
     "pattern":"jdk.jfr:\\Qjdk/jfr/internal/query/view.ini\\E"
   }]},
   "bundles":[{
-    "name":"jakarta.servlet.LocalStrings",
-    "locales":[""]
-  }, {
     "name":"jakarta.servlet.http.LocalStrings",
     "locales":[""]
   }, {
     "name":"org.apache.catalina.authenticator.LocalStrings",
-    "locales":[""]
-  }, {
-    "name":"org.apache.catalina.authenticator.jaspic.LocalStrings",
     "locales":[""]
   }, {
     "name":"org.apache.catalina.connector.LocalStrings",
@@ -2187,9 +2181,6 @@
     "name":"org.apache.coyote.http11.LocalStrings",
     "locales":[""]
   }, {
-    "name":"org.apache.coyote.http11.filters.LocalStrings",
-    "locales":[""]
-  }, {
     "name":"org.apache.naming.LocalStrings",
     "locales":[""]
   }, {
@@ -2206,9 +2197,6 @@
     "locales":[""]
   }, {
     "name":"org.apache.tomcat.util.http.LocalStrings",
-    "locales":[""]
-  }, {
-    "name":"org.apache.tomcat.util.http.parser.LocalStrings",
     "locales":[""]
   }, {
     "name":"org.apache.tomcat.util.modeler.LocalStrings",
