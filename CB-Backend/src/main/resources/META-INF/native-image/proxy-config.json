@@ -106,5 +106,8 @@
   },
   {
     "interfaces":["org.springframework.web.bind.annotation.RequestParam"]
-  }
+  },
+  {
+  "interfaces": ["edu.ucmo.cbbackend.dto.response.UserResponse"]
+}
 ]

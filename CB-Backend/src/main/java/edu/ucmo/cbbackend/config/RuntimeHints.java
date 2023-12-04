@@ -16,8 +16,7 @@ class MyRuntimeHints {
             // Register resources
             hints.resources().registerPattern("jwtprivate.pem");
             hints.resources().registerPattern("jwtpub.pem");
-            hints.resources().registerPattern("superhero.yml");
-            hints.resources().registerPattern("en-US.yml");
+
         }
     }
 }
