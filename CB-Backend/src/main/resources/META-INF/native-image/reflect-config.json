@@ -1,15 +1,11 @@
 [
-  [
+
     {
-      "name" : "edu.ucmo.cbbackend.dto.response.UserResponse",
-      "allDeclaredConstructors" : true,
-      "allPublicConstructors" : true,
-      "allDeclaredMethods" : true,
-      "allPublicMethods" : true,
-      "allDeclaredFields" : true,
-      "allPublicFields" : true
-    }
-  ]
+      "name":"edu.ucmo.cbbackend.dto.response.UserResponse",
+      "allDeclaredMethods":true,
+      "allPublicMethods":true
+    },
+
 {
   "name":"[B"
 },
@@ -178,9 +174,6 @@
   "methods":[{"name":"<init>","parameterTypes":["java.lang.String"] }, {"name":"from","parameterTypes":["java.lang.String"] }, {"name":"of","parameterTypes":["java.lang.String"] }, {"name":"valueOf","parameterTypes":["java.lang.String"] }]
 },
 {
-  "name":"[Lorg.springframework.data.domain.Sort$Order;"
-},
-{
   "name":"[Lorg.springframework.jmx.export.metadata.ManagedOperationParameter;"
 },
 {
@@ -278,9 +271,6 @@
   "methods":[{"name":"value","parameterTypes":[] }]
 },
 {
-  "name":"com.fasterxml.jackson.annotation.JsonInclude"
-},
-{
   "name":"com.fasterxml.jackson.annotation.JsonInclude$Include",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
@@ -337,7 +327,7 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"getJsonFactory","parameterTypes":[] }, {"name":"readValues","parameterTypes":["com.fasterxml.jackson.core.JsonParser","com.fasterxml.jackson.core.type.ResolvedType"] }, {"name":"readValues","parameterTypes":["com.fasterxml.jackson.core.JsonParser","java.lang.Class"] }]
+  "methods":[{"name":"getJsonFactory","parameterTypes":[] }, {"name":"readValues","parameterTypes":["com.fasterxml.jackson.core.JsonParser","com.fasterxml.jackson.core.type.ResolvedType"] }, {"name":"readValues","parameterTypes":["com.fasterxml.jackson.core.JsonParser","com.fasterxml.jackson.core.type.TypeReference"] }, {"name":"readValues","parameterTypes":["com.fasterxml.jackson.core.JsonParser","java.lang.Class"] }]
 },
 {
   "name":"com.fasterxml.jackson.core.PrettyPrinter"
@@ -865,7 +855,7 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"execute","parameterTypes":["org.aspectj.lang.ProceedingJoinPoint"] }]
+  "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
   "name":"edu.ucmo.cbbackend.config.MyRuntimeHints",
@@ -946,7 +936,7 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":["edu.ucmo.cbbackend.service.ChangeService","edu.ucmo.cbbackend.service.UserService","edu.ucmo.cbbackend.repository.RolesRepository"] }, {"name":"getChange","parameterTypes":["jakarta.servlet.http.HttpServletRequest","java.lang.Integer","java.lang.Integer","java.lang.Boolean","java.lang.String"] }]
+  "methods":[{"name":"<init>","parameterTypes":["edu.ucmo.cbbackend.service.ChangeService","edu.ucmo.cbbackend.service.UserService","edu.ucmo.cbbackend.repository.RolesRepository"] }]
 },
 {
   "name":"edu.ucmo.cbbackend.controller.ChangeController$$SpringCGLIB$$0"
@@ -966,7 +956,7 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":["edu.ucmo.cbbackend.repository.UserRepository","edu.ucmo.cbbackend.service.UserService"] }, {"name":"getCurrentUser","parameterTypes":["jakarta.servlet.http.HttpServletRequest"] }]
+  "methods":[{"name":"<init>","parameterTypes":["edu.ucmo.cbbackend.repository.UserRepository","edu.ucmo.cbbackend.service.UserService"] }]
 },
 {
   "name":"edu.ucmo.cbbackend.controller.UserController$$SpringCGLIB$$0"
@@ -984,18 +974,10 @@
   "name":"edu.ucmo.cbbackend.dto.request.UserRegisterRequest"
 },
 {
-  "name":"edu.ucmo.cbbackend.dto.response.ChangeRequestHttpResponseDTO",
-  "allDeclaredFields":true,
-  "queryAllDeclaredMethods":true,
-  "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"getApplicationId","parameterTypes":[] }, {"name":"getApproveOrDeny","parameterTypes":[] }, {"name":"getAuthorId","parameterTypes":[] }, {"name":"getAuthorUserName","parameterTypes":[] }, {"name":"getBackoutPlan","parameterTypes":[] }, {"name":"getChangeType","parameterTypes":[] }, {"name":"getDateCreated","parameterTypes":[] }, {"name":"getDateUpdated","parameterTypes":[] }, {"name":"getDescription","parameterTypes":[] }, {"name":"getId","parameterTypes":[] }, {"name":"getImplementer","parameterTypes":[] }, {"name":"getReason","parameterTypes":[] }, {"name":"getRiskLevel","parameterTypes":[] }, {"name":"getRoles","parameterTypes":[] }, {"name":"getState","parameterTypes":[] }, {"name":"getTimeToRevert","parameterTypes":[] }, {"name":"getTimeWindowEnd","parameterTypes":[] }, {"name":"getTimeWindowStart","parameterTypes":[] }]
+  "name":"edu.ucmo.cbbackend.dto.response.ChangeRequestHttpResponseDTO"
 },
 {
-  "name":"edu.ucmo.cbbackend.dto.response.UserResponse",
-  "allDeclaredFields":true,
-  "queryAllDeclaredMethods":true,
-  "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"getChangeRequestsId","parameterTypes":[] }, {"name":"getId","parameterTypes":[] }, {"name":"getRole","parameterTypes":[] }, {"name":"getUsername","parameterTypes":[] }]
+  "name":"edu.ucmo.cbbackend.dto.response.UserResponse"
 },
 {
   "name":"edu.ucmo.cbbackend.model.ChangeRequest",
@@ -1006,27 +988,19 @@
   "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"equals","parameterTypes":["java.lang.Object"] }, {"name":"getId","parameterTypes":[] }, {"name":"setId","parameterTypes":["java.lang.Long"] }]
 },
 {
-  "name":"edu.ucmo.cbbackend.model.ChangeRequestApproveOrDeny",
-  "allDeclaredFields":true,
-  "queryAllDeclaredMethods":true
+  "name":"edu.ucmo.cbbackend.model.ChangeRequestApproveOrDeny"
 },
 {
-  "name":"edu.ucmo.cbbackend.model.ChangeRequestRiskLevel",
-  "allDeclaredFields":true,
-  "queryAllDeclaredMethods":true
+  "name":"edu.ucmo.cbbackend.model.ChangeRequestRiskLevel"
 },
 {
-  "name":"edu.ucmo.cbbackend.model.ChangeRequestState",
-  "allDeclaredFields":true,
-  "queryAllDeclaredMethods":true
+  "name":"edu.ucmo.cbbackend.model.ChangeRequestState"
 },
 {
   "name":"edu.ucmo.cbbackend.model.ChangeRequest_"
 },
 {
-  "name":"edu.ucmo.cbbackend.model.ChangeType",
-  "allDeclaredFields":true,
-  "queryAllDeclaredMethods":true
+  "name":"edu.ucmo.cbbackend.model.ChangeType"
 },
 {
   "name":"edu.ucmo.cbbackend.model.Roles",
@@ -1034,7 +1008,7 @@
   "queryAllDeclaredMethods":true,
   "queryAllPublicMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"equals","parameterTypes":["java.lang.Object"] }, {"name":"getId","parameterTypes":[] }, {"name":"getName","parameterTypes":[] }, {"name":"setId","parameterTypes":["java.lang.Long"] }]
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"equals","parameterTypes":["java.lang.Object"] }, {"name":"getId","parameterTypes":[] }, {"name":"setId","parameterTypes":["java.lang.Long"] }]
 },
 {
   "name":"edu.ucmo.cbbackend.model.Roles_"
@@ -1937,7 +1911,7 @@
 {
   "name":"jakarta.persistence.ManyToOne",
   "queryAllDeclaredMethods":true,
-  "methods":[{"name":"optional","parameterTypes":[] }, {"name":"targetEntity","parameterTypes":[] }, {"name":"value","parameterTypes":[] }]
+  "methods":[{"name":"targetEntity","parameterTypes":[] }, {"name":"value","parameterTypes":[] }]
 },
 {
   "name":"jakarta.persistence.OneToMany",
@@ -2133,9 +2107,6 @@
   "name":"jakarta.validation.bootstrap.GenericBootstrap"
 },
 {
-  "name":"jakarta.validation.constraints.FutureOrPresent"
-},
-{
   "name":"jakarta.validation.constraints.Min",
   "queryAllDeclaredMethods":true,
   "methods":[{"name":"value","parameterTypes":[] }]
@@ -2144,9 +2115,6 @@
   "name":"jakarta.validation.constraints.NotBlank",
   "queryAllDeclaredMethods":true,
   "methods":[{"name":"value","parameterTypes":[] }]
-},
-{
-  "name":"jakarta.validation.constraints.PositiveOrZero"
 },
 {
   "name":"jakarta.validation.executable.ExecutableValidator"
@@ -2195,9 +2163,6 @@
 },
 {
   "name":"java.io.OutputStream"
-},
-{
-  "name":"java.io.PrintStream"
 },
 {
   "name":"java.io.PrintWriter"
@@ -2259,14 +2224,6 @@
   "name":"java.lang.CloneNotSupportedException"
 },
 {
-  "name":"java.lang.Cloneable",
-  "queryAllDeclaredMethods":true
-},
-{
-  "name":"java.lang.Comparable",
-  "queryAllDeclaredMethods":true
-},
-{
   "name":"java.lang.Deprecated",
   "queryAllPublicMethods":true
 },
@@ -2312,7 +2269,6 @@
 },
 {
   "name":"java.lang.Long",
-  "queryAllDeclaredMethods":true,
   "fields":[{"name":"TYPE"}]
 },
 {
@@ -2699,9 +2655,6 @@
   "name":"java.security.AllPermission"
 },
 {
-  "name":"java.security.Principal"
-},
-{
   "name":"java.security.SecureClassLoader",
   "queryAllDeclaredMethods":true
 },
@@ -2734,9 +2687,6 @@
   "name":"java.sql.ConnectionBuilder"
 },
 {
-  "name":"java.sql.Date"
-},
-{
   "name":"java.sql.Driver"
 },
 {
@@ -2764,10 +2714,7 @@
   "name":"java.sql.Statement"
 },
 {
-  "name":"java.sql.Timestamp",
-  "allDeclaredFields":true,
-  "queryAllDeclaredMethods":true,
-  "queryAllDeclaredConstructors":true
+  "name":"java.sql.Timestamp"
 },
 {
   "name":"java.sql.Types",
@@ -2804,9 +2751,7 @@
   "name":"java.util.Comparator"
 },
 {
-  "name":"java.util.Date",
-  "allDeclaredFields":true,
-  "queryAllDeclaredMethods":true
+  "name":"java.util.Date"
 },
 {
   "name":"java.util.EnumSet"
@@ -2873,8 +2818,7 @@
   "name":"java.util.concurrent.BlockingQueue"
 },
 {
-  "name":"java.util.concurrent.Callable",
-  "methods":[{"name":"call","parameterTypes":[] }]
+  "name":"java.util.concurrent.Callable"
 },
 {
   "name":"java.util.concurrent.CompletableFuture"
@@ -10507,18 +10451,6 @@
   "name":"org.springframework.data.cassandra.ReactiveSession"
 },
 {
-  "name":"org.springframework.data.domain.AbstractPageRequest",
-  "allDeclaredFields":true,
-  "queryAllDeclaredMethods":true,
-  "methods":[{"name":"getOffset","parameterTypes":[] }, {"name":"getPageNumber","parameterTypes":[] }, {"name":"getPageSize","parameterTypes":[] }]
-},
-{
-  "name":"org.springframework.data.domain.Chunk",
-  "allDeclaredFields":true,
-  "queryAllDeclaredMethods":true,
-  "methods":[{"name":"getContent","parameterTypes":[] }, {"name":"getNumber","parameterTypes":[] }, {"name":"getNumberOfElements","parameterTypes":[] }, {"name":"getSize","parameterTypes":[] }, {"name":"getSort","parameterTypes":[] }, {"name":"isFirst","parameterTypes":[] }]
-},
-{
   "name":"org.springframework.data.domain.Example"
 },
 {
@@ -10528,39 +10460,13 @@
   "name":"org.springframework.data.domain.OffsetScrollPosition"
 },
 {
-  "name":"org.springframework.data.domain.Page",
-  "queryAllDeclaredMethods":true
+  "name":"org.springframework.data.domain.Page"
 },
 {
-  "name":"org.springframework.data.domain.PageImpl",
-  "allDeclaredFields":true,
-  "queryAllDeclaredMethods":true,
-  "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"getTotalElements","parameterTypes":[] }, {"name":"getTotalPages","parameterTypes":[] }, {"name":"isLast","parameterTypes":[] }]
+  "name":"org.springframework.data.domain.Pageable"
 },
 {
-  "name":"org.springframework.data.domain.PageRequest",
-  "allDeclaredFields":true,
-  "queryAllDeclaredMethods":true,
-  "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"getSort","parameterTypes":[] }]
-},
-{
-  "name":"org.springframework.data.domain.Pageable",
-  "queryAllDeclaredMethods":true,
-  "methods":[{"name":"isPaged","parameterTypes":[] }, {"name":"isUnpaged","parameterTypes":[] }]
-},
-{
-  "name":"org.springframework.data.domain.Slice",
-  "queryAllDeclaredMethods":true,
-  "methods":[{"name":"getPageable","parameterTypes":[] }]
-},
-{
-  "name":"org.springframework.data.domain.Sort",
-  "allDeclaredFields":true,
-  "queryAllDeclaredMethods":true,
-  "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"isEmpty","parameterTypes":[] }, {"name":"isSorted","parameterTypes":[] }, {"name":"isUnsorted","parameterTypes":[] }]
+  "name":"org.springframework.data.domain.Sort"
 },
 {
   "name":"org.springframework.data.elasticsearch.client.elc.ElasticsearchTemplate"
@@ -10675,7 +10581,7 @@
   "queryAllDeclaredMethods":true,
   "queryAllPublicMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":["org.springframework.data.jpa.repository.support.JpaEntityInformation","jakarta.persistence.EntityManager"] }, {"name":"findAll","parameterTypes":[] }, {"name":"findByNameIgnoreCase","parameterTypes":["java.lang.String"] }, {"name":"findByRoles_NameAndState","parameterTypes":["java.lang.String","edu.ucmo.cbbackend.model.ChangeRequestState","org.springframework.data.domain.Pageable"] }, {"name":"findByUsername","parameterTypes":["java.lang.String"] }]
+  "methods":[{"name":"<init>","parameterTypes":["org.springframework.data.jpa.repository.support.JpaEntityInformation","jakarta.persistence.EntityManager"] }, {"name":"findAll","parameterTypes":[] }, {"name":"findByNameIgnoreCase","parameterTypes":["java.lang.String"] }]
 },
 {
   "name":"org.springframework.data.jpa.util.HibernateProxyDetector",
@@ -11201,9 +11107,6 @@
 },
 {
   "name":"org.springframework.http.ResponseEntity"
-},
-{
-  "name":"org.springframework.http.ResponseEntity$BodyBuilder"
 },
 {
   "name":"org.springframework.http.client.observation.ClientRequestObservationConvention"
@@ -13736,10 +13639,6 @@
 },
 {
   "name":"sun.security.rsa.RSAKeyFactory$Legacy",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
-  "name":"sun.security.rsa.RSASignature$SHA256withRSA",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
