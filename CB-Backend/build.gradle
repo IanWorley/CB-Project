@@ -37,7 +37,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    rewrite("org.openrewrite.recipe:rewrite-spring:5.1.4")
+    rewrite("org.openrewrite.recipe:rewrite-spring:5.1.7")
 }
 
 
